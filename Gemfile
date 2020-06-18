@@ -28,6 +28,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
+# Interactor provides a common interface for performing complex user interactions.
+gem 'interactor', '~> 3.0'
+# Interactor Rails provides Rails support for the Interactor gem.
+gem 'interactor-rails'
+
 group :development, :test do
   # rspec-rails brings the RSpec testing framework to Ruby on Rails as a drop-in alternative to its default testing framework, Minitest.
   gem 'rspec-rails', '~> 3.6.0'
