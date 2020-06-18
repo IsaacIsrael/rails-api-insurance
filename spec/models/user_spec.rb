@@ -26,4 +26,6 @@ RSpec.describe User, type: :model do
     expect(FactoryBot.build(:user, risk_questions: [1, false, 1])).to be_valid
     expect(FactoryBot.build(:user, risk_questions: [1, true, 1])).to be_valid
   end
+  it { should have_one(:house) }
+  it { should accept_nested_attributes_for(:house) }
 end

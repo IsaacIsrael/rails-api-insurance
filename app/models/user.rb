@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_one :house
   validates_numericality_of :age,
                             greater_than_or_equal_to: 0,
                             only_integer: true
@@ -15,6 +16,8 @@ class User < ApplicationRecord
             length: { is: 3, message: 'is the wrong length (should be 3 answers)' }
 
   validate :invalid
+
+  accepts_nested_attributes_for :house
 
   def initialize(attribute)
     if attribute && attribute[:risk_questions]
