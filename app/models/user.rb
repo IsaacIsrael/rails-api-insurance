@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_one :house
+  has_one :vehicle
+
   validates_numericality_of :age,
                             greater_than_or_equal_to: 0,
                             only_integer: true
@@ -17,7 +19,7 @@ class User < ApplicationRecord
 
   validate :invalid
 
-  accepts_nested_attributes_for :house
+ accepts_nested_attributes_for :house, :vehicle
 
   def initialize(attribute)
     if attribute && attribute[:risk_questions]

@@ -28,4 +28,6 @@ RSpec.describe User, type: :model do
   end
   it { should have_one(:house) }
   it { should accept_nested_attributes_for(:house) }
+  it { should have_one(:vehicle) }
+  it { should accept_nested_attributes_for(:vehicle) }
 end
