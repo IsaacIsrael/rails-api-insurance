@@ -17,7 +17,7 @@ RSpec.describe V1::InsurancePlansController, type: :controller do
       }
     end
     context 'passing valid parameters' do
-      before { post :create, params: params, as: :json , as: :json }
+      before { post :create, params: params, as: :json }
       it { expect(response).to be_successful }
       it { expect(response).to have_http_status :ok }
     end
