@@ -95,7 +95,7 @@ The API inputs needs to be pass as the follow rules:
 - vehicle as hash object or null
 - vehicle year as an integer equal or greater than 0.
 
-Obs: *If you pass vehicle or house as any object diferent than array or hash it will be disconsider the field*
+Obs: *If you pass vehicle or house as any object diferent than array or hash it will consider the field as null*
 
 
 The API will respond with the insurance plans for this profile  with the status 200, in the following JSON format:
